@@ -119,58 +119,6 @@
       .section {
         padding: 1.5rem;
       }
-
-      /* ====== MENÚ RESPONSIVE ====== */
-      .menu-btn {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.8rem;
-        cursor: pointer;
-        padding: 0.4rem 1rem;
-        position: absolute;
-        left: 10px;
-        top: 8px;
-      }
-
-      .navbar ul {
-        display: none;
-      }
-
-      .menu-links {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 220px;
-        height: 100vh;
-        background-color: var(--color-accent);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding-top: 70px;
-        padding-left: 20px;
-        gap: 15px;
-        transition: left 0.3s ease;
-        z-index: 2000;
-      }
-
-      .menu-links.show-menu {
-        left: 0;
-      }
-
-      .menu-links li {
-        margin: 0;
-        width: 100%;
-      }
-
-      .menu-links a {
-        display: block;
-        width: 100%;
-        font-size: 1rem;
-        text-align: left;
-      }
     }
   </style>
 </head>
@@ -183,8 +131,7 @@
   </header>
 
   <nav class="navbar">
-    <button id="menu-btn" class="menu-btn">☰</button>
-    <ul class="menu-links" id="menu-links">
+    <ul>
       <li><a onclick="mostrarSeccion('contexto')">Contexto</a></li>
       <li><a onclick="mostrarSeccion('aspectos')">Aspectos Legales</a></li>
       <li><a onclick="mostrarSeccion('impactos')">Impactos</a></li>
@@ -267,17 +214,12 @@
 
   <script>
     function mostrarSeccion(id) {
-      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.remove('active');
+      });
       document.getElementById(id).classList.add('active');
       window.scrollTo({ top: 0, behavior: "smooth" });
-      document.getElementById('menu-links').classList.remove('show-menu');
     }
-
-    const menuBtn = document.getElementById('menu-btn');
-    const menuLinks = document.getElementById('menu-links');
-    menuBtn.addEventListener('click', () => {
-      menuLinks.classList.toggle('show-menu');
-    });
   </script>
 </body>
 </html>
