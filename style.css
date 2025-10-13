@@ -1,90 +1,179 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Investigación: Río Atuel y su Disputa</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+:root {
+  --color-bg: #f5f5f5;
+  --color-card: #ffffff;
+  --color-accent: #0a5c67;
+  --color-text: #222;
+  --shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
 
-  <header>
-    <h1>Investigación sobre el Río Atuel y su Disputa</h1>
-    <p>Conflicto hídrico entre Mendoza y La Pampa</p>
-  </header>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #121212;
+    --color-card: #1e1e1e;
+    --color-accent: #00bcd4;
+    --color-text: #f0f0f0;
+    --shadow: 0 4px 25px rgba(0,0,0,0.5);
+  }
+}
 
-  <nav class="navbar">
-    <ul>
-      <li><a onclick="mostrarSeccion('contexto')">Contexto</a></li>
-      <li><a onclick="mostrarSeccion('aspectos')">Aspectos Legales</a></li>
-      <li><a onclick="mostrarSeccion('impactos')">Impactos</a></li>
-      <li><a onclick="mostrarSeccion('perspectivas')">Perspectivas</a></li>
-      <li><a onclick="mostrarSeccion('profundizacion')">Profundización</a></li>
-      <li><a onclick="mostrarSeccion('bibliografia')">Bibliografía</a></li>
-    </ul>
-  </nav>
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  transition: background 0.3s, color 0.3s;
+}
 
-  <main>
-    <section id="contexto" class="card fade-in active">
-      <h2>1. Contexto Histórico y Social</h2>
-      <img src="img/rio-atuel.jpg" alt="Río Atuel" />
-      <p>El conflicto por el agua del Río Atuel entre Mendoza y La Pampa tiene raíces en el siglo XX...</p>
-    </section>
+/* ENCABEZADO */
+header {
+  background: linear-gradient(135deg, #0a5c67, #127c89);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  box-shadow: var(--shadow);
+}
+header h1 { margin-bottom: 0.5rem; }
 
-    <section id="aspectos" class="card fade-in">
-      <h2>2. Aspectos Legales y Políticos</h2>
-      <img src="img/conflicto-mendoza-pampa.jpg" alt="Mapa del conflicto" />
-      <p>El uso del Río Atuel está regulado por leyes nacionales y provinciales...</p>
-    </section>
+/* NAVBAR */
+.navbar {
+  background-color: var(--color-accent);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0.5rem;
+}
+.navbar li { margin: 0.5rem; }
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.navbar a:hover { background: rgba(255,255,255,0.15); }
 
-    <section id="impactos" class="card fade-in">
-      <h2>3. Impactos Ambientales y Económicos</h2>
-      <img src="img/impacto-ambiental.jpg" alt="Terreno árido" />
-      <p>La desviación del río provocó desertificación en el oeste pampeano...</p>
-    </section>
+/* SECCIONES */
+main {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    <section id="perspectivas" class="card fade-in">
-      <h2>4. Perspectivas y Soluciones</h2>
-      <img src="img/soluciones.jpg" alt="Soluciones hídricas" />
-      <p>Las soluciones deben centrarse en acuerdos cooperativos...</p>
-    </section>
+.card {
+  background: var(--color-card);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin: 1.5rem 0;
+  width: 90%;
+  max-width: 900px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
 
-    <section id="profundizacion" class="card fade-in">
-      <h2>5. Preguntas para Profundizar</h2>
-      <img src="img/actores-sociales.jpg" alt="Comunidades locales" />
-      <ul>
-        <li>¿Cómo influye el cambio climático en la disponibilidad del agua del río?</li>
-        <li>¿Qué rol tienen los medios en la construcción de la percepción pública?</li>
-        <li>¿Qué experiencias de gestión colaborativa podrían aplicarse?</li>
-      </ul>
-    </section>
+/* ANIMACIONES */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    <section id="bibliografia" class="card fade-in">
-      <h2>6. Bibliografía</h2>
-      <ul>
-        <li><a href="https://www.argentina.gob.ar/noticias/el-conflicto-por-el-rio-atuel" target="_blank">Gobierno de Argentina</a></li>
-        <li><a href="https://www.lapampa.gob.ar/noticias/actualidad/32152-rio-atuel-un-conflicto-historico.html" target="_blank">Gobierno de La Pampa</a></li>
-        <li><a href="https://www.mendoza.gov.ar/ambiente/gestion-hidrica-del-rio-atuel/" target="_blank">Gobierno de Mendoza</a></li>
-        <li><a href="https://es.wikipedia.org/wiki/Conflicto_por_el_R%C3%ADo_Atuel" target="_blank">Wikipedia</a></li>
-        <li><a href="https://www.lanacion.com.ar/sociedad/el-rio-atuel-y-el-viejo-pleito-entre-mendoza-y-la-pampa-nid23032018/" target="_blank">La Nación</a></li>
-      </ul>
-    </section>
-  </main>
+/* FOOTER */
+footer {
+  background: var(--color-accent);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+}
 
-  <footer>
-    <p>Trabajo de investigación escolar – Río Atuel © 2025</p>
-  </footer>
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .card { padding: 1.5rem; }
+  header h1 { font-size: 1.6rem; }
+}
+/* ----- Menú responsive lateral ----- */
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
-  <script>
-    function mostrarSeccion(id) {
-      const secciones = document.querySelectorAll('.card');
-      secciones.forEach(sec => {
-        sec.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
-      window.scrollTo(0, 0); // sube al principio cada vez
-    }
-  </script>
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+}
 
-</body>
-</html>
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* --------- Versión móvil --------- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--color-accent);
+    width: 220px;
+    height: 100vh;
+    padding-top: 70px;
+    gap: 15px;
+    transition: left 0.3s ease;
+  }
+
+  .nav-links.show {
+    left: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+  }
+}
