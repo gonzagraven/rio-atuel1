@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investigación: Río Atuel y su Disputa</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --color-bg: #121212;
+      --color-card: #1e1e1e;
+      --color-accent: #00bcd4;
+      --color-text: #f0f0f0;
+      --shadow: 0 4px 25px rgba(0,0,0,0.5);
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --color-bg: #f5f5f5;
+        --color-card: #ffffff;
+        --color-accent: #0a5c67;
+        --color-text: #222;
+        --shadow: 0 4px 20px rgba(0,0,0,0.1);
+      }
+    }
+
+    body {
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0a5c67, #127c89);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .navbar {
+      background-color: var(--color-accent);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0.5rem;
+    }
+
+    .navbar li {
+      margin: 0.5rem;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    .navbar a:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    main {
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section {
+      display: none;
+      width: 90%;
+      max-width: 900px;
+      background: var(--color-card);
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      margin: 1.5rem 0;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .section img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+
+    footer {
+      background: var(--color-accent);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      .section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Investigación sobre el Río Atuel y su Disputa</h1>
+      <p>Conflicto hídrico entre Mendoza y La Pampa</p>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a onclick="mostrarSeccion('contexto')">Contexto</a></li>
+      <li><a onclick="mostrarSeccion('aspectos')">Aspectos Legales</a></li>
+      <li><a onclick="mostrarSeccion('impactos')">Impactos</a></li>
+      <li><a onclick="mostrarSeccion('perspectivas')">Perspectivas</a></li>
+      <li><a onclick="mostrarSeccion('profundizacion')">Profundización</a></li>
+      <li><a onclick="mostrarSeccion('bibliografia')">Bibliografía</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="contexto" class="section active">
+      <h2>1. Contexto Histórico y Social</h2>
+      <img src="img/rio-atuel.jpg" alt="Río Atuel en la región de Cuyo" />
+      <p>
+El conflicto por el uso del Río Atuel entre las provincias de Mendoza y La Pampa tiene más de un siglo de historia y refleja tensiones estructurales sobre la distribución desigual de los recursos naturales en Argentina.
+El río nace en la cordillera de los Andes, dentro del territorio mendocino, y su cauce natural se extendía históricamente hasta el noroeste de La Pampa, donde alimentaba una red de humedales, bañados y ecosistemas fundamentales para la economía y el modo de vida local.
+
+A comienzos del siglo XX, Mendoza comenzó a construir obras de riego y aprovechamiento hidráulico —como los diques Nihuil I, II y III— bajo el modelo agroexportador dominante de la época. Este modelo priorizaba la producción intensiva de vid, frutales y cultivos industriales orientados al mercado externo. En este esquema, el agua se concibió como un recurso económico y productivo, no como un bien común, lo que desplazó a comunidades y ecosistemas que dependían de su curso natural.
+
+La consecuencia fue la desertificación progresiva del oeste pampeano, que perdió su fertilidad y biodiversidad. La falta de caudal provocó la desaparición de bosques de caldén y la migración forzada de muchas familias. Este fenómeno puede entenderse también desde el concepto de segregación territorial, ya que el desarrollo de una provincia se dio a costa del empobrecimiento ambiental y social de otra.
+
+En las últimas décadas, organizaciones sociales, comunidades rurales e incluso pueblos originarios —como los ranqueles— han reclamado la recuperación del río, argumentando que el agua forma parte de su territorialidad cultural e identitaria, más allá de su valor económico. Estos actores han sido claves en visibilizar el conflicto y presionar por soluciones integrales, incorporando la dimensión ambiental y de justicia social al debate público.
+      </p>
+      <p>
+      </p>
+    </section>
+
+    <section id="aspectos" class="section">
+      <h2>2. Aspectos Legales y Políticos</h2>
+      <img src="img/mapa.jpg" alt="Mapa del conflicto" />
+      <p>
+El marco legal argentino reconoce el principio de federalismo de recursos, lo que significa que cada provincia es dueña de los recursos naturales dentro de su territorio. Sin embargo, cuando se trata de ríos interjurisdiccionales —que atraviesan más de una provincia—, deben gestionarse de manera compartida y equitativa.
+
+La provincia de Mendoza ha argumentado históricamente que el Atuel es un río “intraprovincial”, ya que nace y en gran parte circula dentro de su territorio. En cambio, La Pampa sostiene que el Atuel es “interprovincial” porque históricamente abasteció sus tierras y comunidades.
+
+El conflicto llegó a la Corte Suprema de Justicia de la Nación en varias ocasiones. En 1987, el tribunal reconoció el derecho pampeano a recibir un caudal mínimo, pero sin establecer un valor concreto. En 2017, una nueva sentencia ordenó a ambas provincias y al Estado Nacional llegar a un acuerdo que garantizara un flujo de agua permanente. Sin embargo, la falta de consenso político y la desconfianza entre los gobiernos provinciales han demorado su cumplimiento.
+
+Las instituciones gubernamentales y judiciales han tenido un papel ambiguo: por un lado, reconocen los derechos ambientales y federales; por otro, la falta de mecanismos de ejecución y control ha perpetuado el conflicto. El caso del Atuel muestra cómo los procesos de centralización del poder y de desarrollo desigual del territorio —heredados del modelo agroexportador— siguen marcando la gestión política y jurídica del agua en Argentina.
+      </p>
+      <p>
+        Mendoza defiende el uso histórico del agua para riego, mientras que La Pampa exige un caudal mínimo ecológico. Las decisiones judiciales han intentado equilibrar estos intereses.
+      </p>
+    </section>
+
+    <section id="impactos" class="section">
+      <h2>3. Impactos Ambientales y Económicos</h2>
+      <img src="img/terreno.jpg" alt="Terreno árido" />
+      <p>
+La desviación del caudal del Río Atuel hacia Mendoza ha tenido consecuencias ambientales profundas. La falta de agua generó la pérdida casi total del ecosistema de los Bañados del Atuel, la salinización del suelo y la desertificación de amplias zonas del oeste pampeano. Esto afectó directamente a la flora autóctona, como los montes de caldén, y a la fauna que dependía del curso fluvial.
+
+Desde el punto de vista económico, la desigual distribución del recurso intensificó las asimetrías regionales. Mendoza consolidó su economía agroindustrial y turística, mientras que La Pampa sufrió un proceso de relegación productiva y despoblamiento rural. Estas dinámicas pueden asociarse con la gentrificación territorial, en la medida en que el control de los recursos naturales genera concentración de poder y desplazamiento de las comunidades menos favorecidas.
+
+En los últimos años se han implementado proyectos de monitoreo ambiental y estudios de impacto conjunto entre universidades y organismos técnicos, pero su alcance aún es limitado. Una solución sostenible requeriría la restauración parcial del ecosistema pampeano y un enfoque de gestión integrada de cuencas, en el que el agua no sea solo un insumo económico, sino un elemento vital de equilibrio ecológico y social.
+      </p>
+      <p>
+        Estas diferencias reflejan modelos económicos distintos, generando desigualdad territorial y social.
+      </p>
+    </section>
+
+    <section id="perspectivas" class="section">
+      <h2>4. Perspectivas y Soluciones</h2>
+      <img src="img/soluciones.jpg" alt="Soluciones hídricas" />
+      <p>
+Existen diversas perspectivas sobre cómo resolver el conflicto.
+Desde Mendoza, predomina una visión técnica y productivista que busca optimizar el uso del agua dentro de la provincia, argumentando su escasez y la necesidad de priorizar la eficiencia agrícola. Desde La Pampa, se sostiene una mirada ecológica y de reparación histórica, basada en el principio de equidad territorial y el derecho humano al agua.
+
+Entre las soluciones propuestas, se destacan:
+
+La creación de un comité interprovincial permanente de gestión del Atuel, con participación ciudadana.
+
+El uso de tecnologías de riego eficiente y obras hidráulicas compartidas.
+
+La reforestación y recuperación de humedales pampeanos.
+
+El desarrollo de políticas educativas y ambientales que promuevan la conciencia del agua como bien común.
+
+El caso del Atuel deja una enseñanza clave: la gestión de los recursos naturales debe trascender las fronteras políticas. Los conflictos hídricos no se resuelven solo con leyes o infraestructura, sino con cooperación, equidad y planificación a largo plazo.
+      </p>
+    </section>
+
+    <section id="profundizacion" class="section">
+      <h2>5. Preguntas para Profundizar</h2>
+      <img src="img/actores-sociales.jpg" alt="Comunidades" />
+      <ul>
+        <li>¿Cómo5. Preguntas para Profundizar y Respuestas
+a. ¿Cómo ha influido el cambio climático en la disponibilidad de agua del Río Atuel?
+
+El cambio climático ha reducido la disponibilidad de agua en toda la cuenca andina. El retroceso de los glaciares y la menor acumulación de nieve disminuyen los caudales anuales, intensificando la disputa. La gestión sostenible del río requiere considerar esta nueva realidad climática.
+
+b. ¿Qué papel juegan los medios de comunicación en la percepción del conflicto?
+
+Los medios pampeanos suelen enfocarse en el reclamo por justicia ambiental y reparación histórica, mientras que los mendocinos resaltan la eficiencia y el derecho al aprovechamiento del agua. Esta dualidad mediática influye en la opinión pública y refuerza posturas provinciales.
+
+c. ¿Existen experiencias de gestión colaborativa útiles para el caso del Atuel?
+
+Sí. Modelos como el del Comité Interjurisdiccional del Río Colorado (COIRCO) o la gestión integrada de cuencas del río Ebro (España) demuestran que la cooperación técnica y la participación ciudadana pueden equilibrar intereses y garantizar sostenibilidad a largo plazo.
+      </ul>
+    </section>
+
+    <section id="bibliografia" class="section">
+      <h2>6. Bibliografía</h2>
+      <ul>
+        <li><a href="https://www.csjn.gov.ar/archivo-cij/nota-28698-Conflicto-R-o-Atuel--la-Corte-orden--a-las-provincias-de-La-Pampa-y-Mendoza-la-presentaci-n-de-un-programa-de-obras-con-la-participaci-n-del-Estado-Nacional.html" target="_blank">Gobierno de Argentina (corte suprema de la justicia)</a></li>
+        <li><a href="https://repositorio.mpd.gov.ar/jspui/handle/123456789/3957" target="_blank">escuea de la defensa publica</a></li>
+        <li><a href="https://www.mendoza.gov.ar/prensa/rio-atuel-autoridades-provinciales-municipales-y-empresarios-se-reunieron-para-fortalecer-la-postura-de-mendoza/" target="_blank">Gobierno de Mendoza</a></li>
+        <li><a href="https://es.wikipedia.org/wiki/R%C3%ADo_Atuel" target="_blank">Wikipedia: Río Atuel</a></li>
+        <li><a href="https://www.lanacion.com.ar/politica/insolito-nuevo-capitulo-de-la-guerra-por-el-agua-entre-mendoza-y-la-pampa-nid16062024/" target="_blank">La Nación: El viejo pleito</a></li>
+        <li><a href="https://www.irrigacion.gov.ar/web/2018/10/18/conflicto-por-atuel-mendoza-y-la-nacion-presentaron-sus-propuestas/" target="_blank"> departamento general de irrigacion: Río Atuel</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Trabajo de investigación escolar – Río Atuel © 2025 |
+    contacto: <a href="mailto:info.rio.atuel@gmail.com">info.rio.atuel@gmail.com</a>
+  </footer>
+
+  <script>
+    function mostrarSeccion(id) {
+      document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
