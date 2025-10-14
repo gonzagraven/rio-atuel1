@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aguas Para Todos - Río Atuel</title>
+  <title>Aguas Para Todos</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div class="container">
       <h1>Investigación sobre el Río Atuel y su Disputa</h1>
-      <p class="subtitle">Conflicto hídrico entre Mendoza y La Pampa</p>
-      <p class="tagline">"Aguas Para Todos"</p>
+      <p>Conflicto hídrico entre Mendoza y La Pampa</p>
+      <p>"Aguas Para Todos"</p>
     </div>
   </header>
 
@@ -22,17 +22,18 @@
       <span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a onclick="mostrarSeccion('contexto')" class="nav-link">Contexto</a></li>
-      <li><a onclick="mostrarSeccion('aspectos')" class="nav-link">Aspectos Legales</a></li>
-      <li><a onclick="mostrarSeccion('impactos')" class="nav-link">Impactos</a></li>
-      <li><a onclick="mostrarSeccion('perspectivas')" class="nav-link">Perspectivas</a></li>
-      <li><a onclick="mostrarSeccion('profundizacion')" class="nav-link">Profundización</a></li>
-      <li><a onclick="mostrarSeccion('bibliografia')" class="nav-link">Bibliografía</a></li>
+      <li><a onclick="mostrarSeccion('contexto')">Contexto</a></li>
+      <li><a onclick="mostrarSeccion('aspectos')">Aspectos Legales</a></li>
+      <li><a onclick="mostrarSeccion('impactos')">Impactos</a></li>
+      <li><a onclick="mostrarSeccion('perspectivas')">Perspectivas</a></li>
+      <li><a onclick="mostrarSeccion('profundizacion')">Profundización</a></li>
+      <li><a onclick="mostrarSeccion('bibliografia')">Bibliografía</a></li>
     </ul>
   </nav>
 
   <main>
-    <section id="contexto" class="section active">
+    <!-- CONTEXTO -->
+    <div id="contexto" class="card fade-in active">
       <h2>1. Contexto Histórico y Social</h2>
       <img src="img/rio-atuel.jpg" alt="Río Atuel en la región de Cuyo" />
       <p>
@@ -47,9 +48,10 @@
       <p>
         Los actores sociales también desempeñaron un papel crucial. Las comunidades locales pampeanas, agricultores y organizaciones ambientales comenzaron a movilizarse denunciando el "robo del río", visibilizando las consecuencias del desvío de agua. En tanto, sectores mendocinos defendían el aprovechamiento económico del recurso como motor del desarrollo regional. Este conflicto, que combina historia, territorio y poder, sigue siendo un reflejo de la desigualdad en la apropiación de los bienes naturales en Argentina.
       </p>
-    </section>
+    </div>
 
-    <section id="aspectos" class="section">
+    <!-- ASPECTOS LEGALES -->
+    <div id="aspectos" class="card fade-in">
       <h2>2. Aspectos Legales y Políticos</h2>
       <img src="img/mapa.jpg" alt="Mapa del conflicto" />
       <p>
@@ -67,9 +69,10 @@
       <p>
         De este modo, el conflicto legal y político por el Atuel refleja cómo las decisiones económicas nacionales condicionaron históricamente el uso del territorio y de los bienes comunes. Mendoza defiende el uso histórico del agua para riego, mientras que La Pampa exige un caudal mínimo ecológico. Las decisiones judiciales han intentado equilibrar estos intereses.
       </p>
-    </section>
+    </div>
 
-    <section id="impactos" class="section">
+    <!-- IMPACTOS -->
+    <div id="impactos" class="card fade-in">
       <h2>3. Impactos Ambientales y Económicos</h2>
       <img src="img/terreno.jpg" alt="Terreno árido" />
       <p>
@@ -87,9 +90,10 @@
       <p>
         La disputa por el Atuel, vista en perspectiva, demuestra cómo los modelos económicos aplicados en Argentina generaron impactos desiguales sobre los territorios, reproduciendo relaciones de poder que benefician a ciertos sectores mientras excluyen a otros.
       </p>
-    </section>
+    </div>
 
-    <section id="perspectivas" class="section">
+    <!-- PERSPECTIVAS -->
+    <div id="perspectivas" class="card fade-in">
       <h2>4. Perspectivas y Soluciones</h2>
       <img src="img/foto perspectivas.jpg" alt="Soluciones hídricas" />
       <p>
@@ -104,9 +108,10 @@
       <p>
         El cambio climático, además, agrava la problemática, ya que reduce la disponibilidad hídrica y aumenta la frecuencia de sequías. En este contexto, el caso del Río Atuel enseña la importancia de la planificación a largo plazo, de políticas federales coordinadas y de la educación ambiental como herramienta de concientización social.
       </p>
-    </section>
+    </div>
 
-    <section id="profundizacion" class="section">
+    <!-- PROFUNDIZACIÓN -->
+    <div id="profundizacion" class="card fade-in">
       <h2>5. Preguntas para Profundizar</h2>
       <img src="img/comunidades.jpg" alt="Comunidades" />
       <p>
@@ -121,41 +126,45 @@
       <p>
         Finalmente, la experiencia del Atuel puede compararse con otros casos internacionales, como la gestión del río Colorado (EE.UU.-México) o el Tajo-Segura (España), donde se implementaron sistemas de gestión compartida, monitoreo constante y participación ciudadana. Estos ejemplos muestran que la cooperación, la transparencia y el diálogo son claves para resolver disputas hídricas de manera sostenible y justa.
       </p>
-    </section>
+    </div>
 
-    <section id="bibliografia" class="section">
+    <!-- BIBLIOGRAFÍA -->
+    <div id="bibliografia" class="card fade-in">
       <h2>6. Bibliografía</h2>
-      <ul class="bibliography">
-        <li><a href="https://www.csjn.gov.ar/archivo-cij/nota-28698-Conflicto-R-o-Atuel--la-Corte-orden--a-las-provincias-de-La-Pampa-y-Mendoza-la-presentaci-n-de-un-programa-de-obras-con-la-participaci-n-del-Estado-Nacional.html" target="_blank">Gobierno de Argentina (Corte Suprema de la Justicia)</a></li>
-        <li><a href="https://repositorio.mpd.gov.ar/jspui/handle/123456789/3957" target="_blank">Escuela de la Defensa Pública</a></li>
+      <ul>
+        <li><a href="https://www.csjn.gov.ar/archivo-cij/nota-28698-Conflicto-R-o-Atuel--la-Corte-orden--a-las-provincias-de-La-Pampa-y-Mendoza-la-presentaci-n-de-un-programa-de-obras-con-la-participaci-n-del-Estado-Nacional.html" target="_blank">Gobierno de Argentina (corte suprema de la justicia)</a></li>
+        <li><a href="https://repositorio.mpd.gov.ar/jspui/handle/123456789/3957" target="_blank">escuela de la defensa publica</a></li>
         <li><a href="https://www.mendoza.gov.ar/prensa/rio-atuel-autoridades-provinciales-municipales-y-empresarios-se-reunieron-para-fortalecer-la-postura-de-mendoza/" target="_blank">Gobierno de Mendoza</a></li>
         <li><a href="https://es.wikipedia.org/wiki/R%C3%ADo_Atuel" target="_blank">Wikipedia: Río Atuel</a></li>
         <li><a href="https://www.lanacion.com.ar/politica/insolito-nuevo-capitulo-de-la-guerra-por-el-agua-entre-mendoza-y-la-pampa-nid16062024/" target="_blank">La Nación: El viejo pleito</a></li>
-        <li><a href="https://www.irrigacion.gov.ar/web/2018/10/18/conflicto-por-atuel-mendoza-y-la-nacion-presentaron-sus-propuestas/" target="_blank">Departamento General de Irrigación: Río Atuel</a></li>
+        <li><a href="https://www.irrigacion.gov.ar/web/2018/10/18/conflicto-por-atuel-mendoza-y-la-nacion-presentaron-sus-propuestas/" target="_blank">departamento general de irrigacion: Río Atuel</a></li>
       </ul>
-    </section>
+    </div>
   </main>
 
   <footer>
-    <p>Trabajo de investigación escolar – Río Atuel © 2025</p>
-    <p>Contacto: <a href="mailto:info.rio.atuel@gmail.com">info.rio.atuel@gmail.com</a></p>
-    <p>Realizado por: GRAVENHORST, Gonzalo - 13/10/2025</p>
+    Trabajo de investigación escolar – Río Atuel © 2025 |
+    contacto: <a href="mailto:info.rio.atuel@gmail.com">info.rio.atuel@gmail.com</a>
+    | realizado por: GRAVENHORST, Gonzalo 13/10/2025
   </footer>
 
   <script>
-    // Función para mostrar secciones
     function mostrarSeccion(id) {
-      document.querySelectorAll('.section').forEach(sec => {
-        sec.classList.remove('active');
+      // Ocultar todas las cards
+      document.querySelectorAll('.card').forEach(card => {
+        card.classList.remove('active');
       });
+      
+      // Mostrar la card seleccionada
       document.getElementById(id).classList.add('active');
       
-      // Cerrar menú en móvil después de seleccionar
+      // Cerrar menú en móvil
       const navLinks = document.getElementById('navLinks');
       const menuToggle = document.getElementById('menuToggle');
       navLinks.classList.remove('show');
       menuToggle.classList.remove('active');
       
+      // Scroll suave al top
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
