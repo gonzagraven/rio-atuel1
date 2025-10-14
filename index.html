@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aguas Para Todos</title>
+  <title>Investigación: Río Atuel y su Disputa</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     :root {
@@ -47,7 +47,6 @@
       z-index: 1000;
     }
 
-    /* Contenedor general del menú */
     .navbar-container {
       display: flex;
       justify-content: center;
@@ -55,7 +54,6 @@
       position: relative;
     }
 
-    /* Ícono hamburguesa */
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -149,7 +147,6 @@
         padding: 1.5rem;
       }
 
-      /* --- Menú hamburguesa solo en móviles --- */
       .menu-toggle {
         display: flex;
       }
@@ -183,19 +180,15 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Investigación sobre el Río Atuel y su Disputa</h1>
-      <p>Conflicto hídrico entre Mendoza y La Pampa</p>
-      <p>"Aguas Para Todos"</p>
-    </div>
+    <h1>Investigación sobre el Río Atuel y su Disputa</h1>
+    <p>Conflicto hídrico entre Mendoza y La Pampa</p>
+    <p>"Aguas Para Todos"</p>
   </header>
 
   <nav class="navbar">
     <div class="navbar-container">
       <div class="menu-toggle" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div></div><div></div><div></div>
       </div>
       <ul id="menu">
         <li><a onclick="mostrarSeccion('contexto')">Contexto</a></li>
@@ -209,15 +202,65 @@
   </nav>
 
   <main>
-    <!-- (todo tu contenido original igual que antes) -->
-    <!-- No se modificó nada  -->
-    <!-- ... -->
+    <!-- CONTEXTO -->
+    <section id="contexto" class="section active">
+      <h2>Contexto</h2>
+      <p>El conflicto por el Río Atuel es una disputa histórica entre las provincias de Mendoza y La Pampa por el uso de las aguas del río. El río Atuel nace en Mendoza y, a través del tiempo, su caudal se ha reducido considerablemente al llegar al territorio pampeano. Esto ha generado tensiones políticas, económicas y sociales que perduran desde hace más de 70 años.</p>
+      <p>En el marco del modelo agroexportador (MAE), las provincias priorizaban la producción agrícola orientada a la exportación, lo que llevó a una explotación intensiva del recurso hídrico. Mendoza, en particular, canalizó y desvió las aguas para regar sus viñedos y cultivos, provocando la disminución del caudal en La Pampa.</p>
+      <p>Con la llegada del modelo de sustitución de importaciones (ISI), el desarrollo industrial y la expansión urbana aumentaron la demanda de agua, intensificando aún más la competencia por el recurso. Finalmente, durante el modelo neoliberal (NL), las políticas de desregulación económica y privatización redujeron la intervención estatal, afectando la gestión equitativa de los recursos naturales compartidos entre provincias.</p>
+      <img src="imagenes/rioatuel.jpg" alt="Río Atuel" />
+    </section>
+
+    <!-- ASPECTOS LEGALES -->
+    <section id="aspectos" class="section">
+      <h2>Aspectos Legales</h2>
+      <p>El conflicto tiene un largo recorrido judicial. En 1947, el gobierno de Mendoza construyó el dique El Nihuil, lo que redujo el flujo de agua hacia La Pampa. En respuesta, esta última reclamó ante la Corte Suprema de Justicia de la Nación (CSJN) por la afectación ambiental y económica provocada.</p>
+      <p>En 1987, la Corte falló estableciendo que ambas provincias debían compartir el uso del río de forma equitativa. Sin embargo, el cumplimiento de este fallo fue limitado. Décadas después, en 2017, la Corte dictó una nueva sentencia que obligó a Mendoza a garantizar un caudal mínimo de 3,2 m³/s hacia La Pampa y a establecer un comité interprovincial de gestión del río.</p>
+      <p>La disputa legal refleja los problemas estructurales del federalismo argentino en materia ambiental. El principio de “uso equitativo y razonable” busca armonizar los derechos provinciales con el interés nacional, pero su aplicación sigue siendo un desafío.</p>
+    </section>
+
+    <!-- IMPACTOS -->
+    <section id="impactos" class="section">
+      <h2>Impactos del Conflicto</h2>
+      <p>Los impactos del conflicto son múltiples y abarcan dimensiones ecológicas, económicas y sociales.</p>
+      <p><strong>Impacto ambiental:</strong> La falta de caudal suficiente ha provocado la desertificación del oeste pampeano, la pérdida de biodiversidad y la degradación del ecosistema del valle del Atuel. El área afectada perdió más de 100.000 hectáreas de bosques naturales y humedales.</p>
+      <p><strong>Impacto económico:</strong> La reducción del agua afectó la producción agrícola y ganadera de La Pampa, disminuyendo la rentabilidad y provocando el abandono de zonas rurales. En contraste, Mendoza fortaleció su economía vitivinícola e hidroenergética.</p>
+      <p><strong>Impacto social:</strong> Las comunidades locales pampeanas sufrieron migraciones forzadas, pérdida de identidad territorial y conflictos por el acceso al agua. Estas consecuencias se agravan en contextos de políticas neoliberales que reducen la inversión estatal en infraestructura hídrica y desarrollo regional.</p>
+    </section>
+
+    <!-- PERSPECTIVAS -->
+    <section id="perspectivas" class="section">
+      <h2>Perspectivas Futuras</h2>
+      <p>El conflicto del Río Atuel sigue vigente y requiere soluciones cooperativas entre ambas provincias. El desarrollo sostenible demanda una gestión integrada de los recursos hídricos que contemple tanto las necesidades humanas como la preservación ambiental.</p>
+      <p>En un contexto de cambio climático y escasez de agua, se vuelve indispensable aplicar modelos económicos más equitativos. La transición hacia una economía sustentable implica políticas de redistribución del agua, inversión en tecnologías eficientes y fortalecimiento de los organismos interprovinciales.</p>
+      <p>La educación ambiental, la participación ciudadana y la planificación estatal son claves para evitar que el modelo neoliberal profundice las desigualdades hídricas.</p>
+    </section>
+
+    <!-- PROFUNDIZACIÓN -->
+    <section id="profundizacion" class="section">
+      <h2>Profundización</h2>
+      <p>La disputa por el Río Atuel es un claro ejemplo de cómo las decisiones económicas, políticas y tecnológicas influyen directamente sobre el medio ambiente. En el modelo agroexportador, el agua fue considerada un insumo productivo al servicio del mercado externo. Durante el modelo ISI, el enfoque cambió parcialmente, pero la planificación centralizada priorizó la expansión económica antes que el equilibrio ambiental.</p>
+      <p>En el neoliberalismo, la gestión del agua se orientó hacia la eficiencia económica y la privatización de servicios, marginando las necesidades de las comunidades rurales. Este proceso agudizó las tensiones entre Mendoza y La Pampa, mostrando la necesidad de repensar la relación entre economía y naturaleza.</p>
+      <p>Una salida posible reside en fortalecer el federalismo ambiental argentino mediante políticas cooperativas, sostenibles y solidarias.</p>
+    </section>
+
+    <!-- BIBLIOGRAFÍA -->
+    <section id="bibliografia" class="section">
+      <h2>Bibliografía</h2>
+      <ul>
+        <li>Corte Suprema de Justicia de la Nación (2017). "Fallo Mendoza c/ La Pampa por uso del Río Atuel".</li>
+        <li>Ministerio de Ambiente y Desarrollo Sostenible (2020). “Gestión integral de cuencas hídricas”.</li>
+        <li>La Nación (2021). “El conflicto histórico por el Atuel y la disputa entre Mendoza y La Pampa”.</li>
+        <li>Clarín (2019). “El reclamo pampeano por el caudal del Atuel”.</li>
+        <li>Constitución Nacional Argentina (Artículos 124 y 41).</li>
+      </ul>
+    </section>
   </main>
 
   <footer>
     Trabajo de investigación escolar – Río Atuel © 2025 |
-    contacto: <a href="mailto:info.rio.atuel@gmail.com">info.rio.atuel@gmail.com</a>
-     | realizado por: GRAVENHORST, Gonzalo 13/10/2025
+    contacto: <a href="mailto:info.rio.atuel@gmail.com">info.rio.atuel@gmail.com</a> |
+    realizado por: GRAVENHORST, Gonzalo – 13/10/2025
   </footer>
 
   <script>
